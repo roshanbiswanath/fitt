@@ -4,15 +4,18 @@
 
 ## Screens
 
-<img align="left" width="240" src="docs/demo-flow.gif" alt="Start a workout, complete a set, rest and continue">
-
-**Train.** Pick Home, Gym or Quick — each remembers its own equipment.
-
-**Plan.** Choose Cardio, Full body or a muscle focus, plus a session length. Everything is generated offline from the gear you own.
-
-**Log.** Complete sets, adjust targets, or add extra sets. Partials adapt the next set without hiding the recommendation.
-
-<br clear="both"/>
+<table>
+  <tr>
+    <td><img width="240" src="docs/demo-flow.gif?v=3" alt="Start a workout, complete a set, rest and continue"></td>
+    <td valign="top">
+      <b>Train.</b> Pick Home, Gym or Quick — each remembers its own equipment.
+      <br><br>
+      <b>Plan.</b> Choose Cardio, Full body or a muscle focus, plus a session length. Everything is generated offline from the gear you own.
+      <br><br>
+      <b>Log.</b> Complete sets, adjust targets, or add extra sets. Partials adapt the next set without hiding the recommendation.
+    </td>
+  </tr>
+</table>
 
 ## Run
 
