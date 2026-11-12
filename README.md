@@ -1,6 +1,12 @@
 # fitt
 
-Personal, offline-first workout trainer built with React, Vite and Tauri 2.
+<p align="center"><img src="docs/icon.png" width="120" alt="fitt. app icon"></p>
+
+## Screens
+
+| Training flow | Custom setup |
+|---|---|
+| ![Start a workout, complete a set, rest and continue](docs/demo-flow.gif) | ![Pick focus and duration, build the plan](docs/demo-setup.gif) |
 
 ## Run
 
@@ -22,7 +28,7 @@ Stop an existing Android dev command before building; Tauri holds an Android pro
 ## Experience
 
 - **Train:** Home / Gym / Quick each remember their own available equipment, focus, duration and target preferences. Equipment is only shown when you choose to configure it; switching locations never prompts you again. Add or remove equipment through the Equipment control.
-- **Plan:** choose Fat loss, Full body, Cardio, Arms, Shoulders, Chest, Back, Legs, Core or Mobility and a 10/15/20/30/45-minute session. The offline planner matches every required piece of equipment (including benches, racks and specific machines), selects relevant movements, and estimates actual time including rests and both sides. Estimates are not calorie or fat-loss predictions. When a combination supports less volume, the UI shows the shorter estimate rather than inventing exercises.
+- **Plan:** choose Cardio, Full body, Arms, Shoulders, Chest, Back, Legs, Core or Mobility and a 10/15/20/30/45-minute session. The offline planner matches every required piece of equipment (including benches, racks and specific machines), selects relevant movements, and estimates actual time including rests and both sides. Estimates cover active time only and are not calorie predictions. When a combination supports less volume, the UI shows the shorter estimate rather than inventing exercises.
 - **Targets:** Edit sets & reps before starting; preferences persist per location and movement. Recommended targets remain visible alongside your custom working amounts. During training, + Set adds another set to the current exercise. Extra in-session sets are logged for that workout; use the editor to change future set counts.
 - **Workout:** local vector demonstrations, session progress, current-set ring, fixed recommendation and editable actual count. Timed moves have a start/pause timer. Partial sets adjust the next matching set without rewriting the recommendation. Additional sets retain unique set indices and are included in the journal.
 - **Rest:** deadline-based countdown and next move; skip when ready.

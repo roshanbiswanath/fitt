@@ -11,9 +11,8 @@ export const LOCATIONS = [
   { id: "quick", label: "Quick", icon: "bolt" },
 ];
 export const FOCUSES = [
-  { id: "fat-loss", label: "Fat loss" },
-  { id: "full-body", label: "Full body" },
   { id: "cardio", label: "Cardio" },
+  { id: "full-body", label: "Full body" },
   { id: "arms", label: "Arms" },
   { id: "shoulders", label: "Shoulders" },
   { id: "chest", label: "Chest" },
@@ -29,9 +28,7 @@ export const defaultProfile = (location) => ({
   focus:
     location === "gym"
       ? "full-body"
-      : location === "quick"
-        ? "cardio"
-        : "fat-loss",
+      : "cardio",
   minutes: location === "gym" ? 30 : location === "quick" ? 10 : 20,
 });
 const gearIds = new Set(EQUIPMENT_OPTIONS.map((e) => e.id));
@@ -55,7 +52,7 @@ const preferred = [
   "db-lateral",
   "db-standing-press",
 ];
-const special = new Set(["fat-loss", "full-body", "cardio", "mobility"]);
+const special = new Set(["full-body", "cardio", "mobility"]);
 const indoorCardio = new Set([
   "treadmill",
   "bike",
@@ -97,7 +94,7 @@ export function generatePlan(input) {
       );
     return (
       e.pattern !== "mobility" &&
-      (config.focus === "fat-loss" || e.pattern !== "cardio")
+      e.pattern !== "cardio"
     );
   });
   const score = (e) => {
@@ -124,11 +121,9 @@ export function generatePlan(input) {
     );
     if (match) chosen.push(match);
   }
-  if (config.focus === "full-body" || config.focus === "fat-loss") {
+  if (config.focus === "full-body") {
     for (const pattern of ["squat", "push", "pull", "hinge", "core"])
       if (chosen.length < desired) choose(pattern);
-    if (config.focus === "fat-loss" && chosen.length < desired)
-      choose("cardio");
   } else if (config.focus === "arms") {
     // Include both elbow flexion and extension rather than only curls.
     const curl = candidates.find((e) => /curl/i.test(e.name));
@@ -166,7 +161,7 @@ export function generatePlan(input) {
       rest:
         config.focus === "mobility"
           ? 15
-          : config.focus === "cardio" || config.focus === "fat-loss"
+          : config.focus === "cardio"
             ? 30
             : 60,
     })),

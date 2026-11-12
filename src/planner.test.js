@@ -30,7 +30,7 @@ test("generated plans obey selected equipment and muscle focus for all supported
           ex.equipment.every((g) => equipment.includes(g)),
           `${ex.name} requires unselected gear`,
         );
-        if (!["full-body", "fat-loss", "cardio", "mobility"].includes(focus.id))
+        if (!["full-body", "cardio", "mobility"].includes(focus.id))
           assert.ok(
             ex.muscles.includes(focus.id),
             `${ex.name} does not target ${focus.id}`,
