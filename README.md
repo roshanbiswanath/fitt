@@ -4,9 +4,15 @@
 
 ## Screens
 
-| Training flow | Custom setup |
-|---|---|
-| ![Start a workout, complete a set, rest and continue](docs/demo-flow.gif) | ![Pick focus and duration, build the plan](docs/demo-setup.gif) |
+<img align="left" width="240" src="docs/demo-flow.gif" alt="Start a workout, complete a set, rest and continue">
+
+**Train.** Pick Home, Gym or Quick — each remembers its own equipment.
+
+**Plan.** Choose Cardio, Full body or a muscle focus, plus a session length. Everything is generated offline from the gear you own.
+
+**Log.** Complete sets, adjust targets, or add extra sets. Partials adapt the next set without hiding the recommendation.
+
+<br clear="both"/>
 
 ## Run
 
