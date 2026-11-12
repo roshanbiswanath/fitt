@@ -1,0 +1,77 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependencies
+node_modules
+
+# Production builds
+dist
+dist-ssr
+*.local
+
+# Rust / Tauri build outputs (gigabytes, regenerable)
+src-tauri/target/
+src-tauri/gen/
+src-tauri/WixTools/
+
+# Android signing secrets — NEVER commit keys or store passwords
+*.jks
+*.keystore
+*.keystore.*
+*.p12
+*.pfx
+key.properties
+*.keystore.password
+
+# Machine-specific Android / Gradle state
+local.properties
+.gradle/
+captures/
+*.hprof
+
+# Release bundles built locally (rebuild via tauri build)
+*.apk
+*.aab
+
+# Raw supplied animation library (large, third-party redistribution unclear).
+# Generated themed copies in src/assets/animations/ stay tracked.
+vfe/
+manifest.json
+manifest-paths.txt
+lottie/
+
+# Local agent skills and scratch config, not part of the app
+.agents/
+.claude/
+*.ipa
+
+# Env with secrets/API keys
+.env
+.env.*
+!.env.example
+
+# TypeScript / test output
+*.tsbuildinfo
+coverage/
+
+# QA screenshots and local notes
+artifacts/
+.qa/
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
